@@ -1,0 +1,63 @@
+﻿@page
+@model LA.Pages.Application.ApplicationModel
+@{
+    ViewData["Title"] = "Application";
+}
+
+<div class="form-group centerlook">
+    <h1> Rental Application For _____ </h1>
+
+    <p><i>Each adult (18 or older) must fill out a separate application</i></p>
+
+    <div class="progress">
+        <div class="progress-bar progress-bar-success" role="progressbar" style="width:20%">
+            Applicant Information
+        </div>
+        <div class="progress-bar progress-bar-warning" role="progressbar" style="width:20%">
+            Residence History
+        </div>
+        <div class="progress-bar progress-bar-warning" role="progressbar" style="width:20%">
+            Employment
+        </div>
+        <div class="progress-bar progress-bar-warning" role="progressbar" style="width:20%">
+            Pets
+        </div>
+        <div class="progress-bar progress-bar-warning" role="progressbar" style="width:20%">
+            General Info
+        </div>        
+    </div>
+
+    <form>
+        <div class="form-group">
+            <label asp-for="pageApplication.MainTenant.FirstName">First Name:</label>
+            <input type="text" class="form-control" asp-for="pageApplication.MainTenant.FirstName" placeholder="Enter First Name">
+        </div>
+        <div class="form-group">
+            <label asp-for="pageApplication.MainTenant.MiddleName">Middle Name:</label>
+            <input type="text" class="form-control" asp-for="pageApplication.MainTenant.MiddleName" placeholder="Enter Middl eName">
+        </div>
+        <div class="form-group">
+            <label asp-for="pageApplication.MainTenant.LastName">Last Name:</label>
+            <input type="text" class="form-control" asp-for="pageApplication.MainTenant.LastName" placeholder="Enter Last Name">
+        </div>
+        <div class="form-group">
+            <label asp-for="pageApplication.MainTenant.DriverLicense">Driver License Number:</label>
+            <input type="text" class="form-control" asp-for="pageApplication.MainTenant.DriverLicense" placeholder="Enter Driver License Number (if applicable)">
+        </div>
+        <div class="form-group">
+            <label asp-for="pageApplication.MainTenant.Phone">Telephone Number:</label>
+            <input type="text" class="form-control" asp-for="pageApplication.MainTenant.Phone" placeholder="Enter Phone Number">
+        </div>
+        <div class="form-group">
+            <label asp-for="pageApplication.MainTenant.EmailAddress">Email Address:</label>
+            <input type="text" class="form-control" asp-for="pageApplication.MainTenant.EmailAddress" placeholder="Enter Email Address">
+        </div>
+        <div class="form-group">
+            <label asp-for="pageApplication.MainTenant.OtherPossibleName">Have you ever been known by another name? If so, which name(s):</label>
+            <input type="text" class="form-control" asp-for="pageApplication.MainTenant.OtherPossibleName" placeholder="">
+        </div>
+
+
+        <button type="submit" class="btn btn-primary">Save and Continue</button>
+    </form>
+</div>
